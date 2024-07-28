@@ -9,7 +9,7 @@ pipeline {
         }
 		 stage('Build') {
             steps {
-               echo "Build Successfull"
+                sh 'mvn -B -DskipTests clean package'
             }
         }
 		 stage('Publish') {
